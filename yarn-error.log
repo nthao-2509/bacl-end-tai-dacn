@@ -1,0 +1,46 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\Nguyen Thanh Hao\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add assert axios bcrypt body-parser cors crypto-js dorenv express firebase firebase-admin is-email jsonwebtoken moment morgan mssql nodemon uuid
+
+PATH: 
+  C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\Git\cmd;C:\Users\Nguyen Thanh Hao\Desktop\openssl-0.9.8k_WIN32\bin;C:\Users\Nguyen Thanh Hao\Desktop\jdk-18_windows-x64_bin\jdk-18.0.2\bin;C:\Program Files (x86)\Microsoft Emulator Manager\1.0\;%NVM_HOME%;%NVM_SYMLINK%;C:\Program Files (x86)\Microsoft SQL Server\150\DTS\Binn\;C:\Program Files\Azure Data Studio\bin;C:\Program Files (x86)\Microsoft SQL Server\160\Tools\Binn\;C:\Program Files\Microsoft SQL Server\160\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files\Microsoft SQL Server\160\DTS\Binn\;C:\Users\Nguyen Thanh Hao\AppData\Local\Microsoft\WindowsApps;C:\Users\Nguyen Thanh Hao\AppData\Roaming\npm;C:\Users\Nguyen Thanh Hao\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Nguyen Thanh Hao\Desktop\openssl-0.9.8k_X64\bin;C:\Users\Nguyen Thanh Hao\Desktop\jdk-18_windows-x64_bin\jdk-18.0.2\;C:\Program Files\heroku\bin;C:\Users\Nguyen Thanh Hao\AppData\Local\Android\Sdk\platform-tools;C:\Users\Nguyen Thanh Hao\AppData\Roaming\nvm;C:\Program Files\nodejs
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  16.15.1
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/dorenv: Not found
+      at Request.params.callback [as _callback] (C:\Users\Nguyen Thanh Hao\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:66145:18)
+      at Request.self.callback (C:\Users\Nguyen Thanh Hao\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:140890:22)
+      at Request.emit (node:events:527:28)
+      at Request.<anonymous> (C:\Users\Nguyen Thanh Hao\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:141862:10)
+      at Request.emit (node:events:527:28)
+      at IncomingMessage.<anonymous> (C:\Users\Nguyen Thanh Hao\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:141784:12)
+      at Object.onceWrapper (node:events:641:28)
+      at IncomingMessage.emit (node:events:539:35)
+      at endReadableNT (node:internal/streams/readable:1345:12)
+      at processTicksAndRejections (node:internal/process/task_queues:83:21)
+
+npm manifest: 
+  {
+    "name": "dacn-2023",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "ISC"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
