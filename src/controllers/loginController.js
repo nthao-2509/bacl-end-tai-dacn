@@ -23,7 +23,6 @@ const postLoginController = async (req, res, next) => {
       firstName: firstName,
       lastName: lastName,
       role: role,
-      typeProduct: typeProduct,
       active: role === 'salesman' ? 0 : 1,
     }
     if (role === 'salesman') {
@@ -31,7 +30,6 @@ const postLoginController = async (req, res, next) => {
         fromEmail: email,
         firstName: firstName,
         lastName: lastName,
-        typeProduct: typeProduct,
       })
     }
     await db.collection('account').doc(id).set(parameters)
@@ -53,7 +51,7 @@ const login = async (req, res) => {
     const getInformationUser = await db.collection('account').where('email', '==', email).get()
     getInformationUser.forEach((doc) => {
       if (doc.data().active === 1 || doc.data().role === 'admin') {
-        res.status(200).json({ message: 'success', token, role: doc.data().role, idUser: doc.id })
+        res.status(200).json({ message: 'success', token, role: doc.data().role, idUser: doc.id, userData: doc.data() })
       } else {
         res.status(200).json({ message: 'no-active' })
       }

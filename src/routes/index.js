@@ -10,7 +10,17 @@ const { accessAccount } = require('../controllers/mailerController')
 
 const Resize = require('../controllers/resize')
 const upload = require('../middleware/uploadMiddleware')
-const { postProductController, selectProductByUser, selectAllProduct, selectProductBySlug } = require('../controllers/productController')
+const {
+  postProductController,
+  selectProductByUser,
+  selectAllProduct,
+  selectProductBySlug,
+  adminSelectProduct,
+  ProductPortfolio,
+  selectProductPortfolio,
+} = require('../controllers/productController')
+const { postCartItemsController } = require('../controllers/cartController')
+const { selectAllUser, selectInfoUserById, updateStatusUser } = require('../controllers/userController')
 
 router.post('/sign-up', postLoginController)
 router.post('/send-email/access-account-salesman', accessAccount)
@@ -21,6 +31,17 @@ router.post('/add-product', postProductController)
 router.post('/select-product-by-id-user', selectProductByUser)
 router.get('/select-product', selectAllProduct)
 router.post('/detail-product', selectProductBySlug)
+router.get('/select-product-admin', adminSelectProduct)
+//CART
+router.post('/add-to-cart', postCartItemsController)
+router.post('/select-data-cart', postCartItemsController)
+// User
+router.get('/select-all-user', selectAllUser)
+router.post('/update-status-user', updateStatusUser)
+
+//Product Portfolio
+router.post('/post-product-portfolio', ProductPortfolio)
+router.get('/select-product-portfolio', selectProductPortfolio)
 
 router.post('/upload-image-product', upload.single('file'), async function (req, res) {
   // folder upload
